@@ -1,0 +1,12 @@
+{
+    "Lua.diagnostics.globals": [
+        "SlashCmdList",
+        "PetJournal",
+        "PetJournalSummonButton",
+        "CollectionsJournal",
+        "PanelTemplates_GetSelectedTab",
+        "STATICPOPUP_NUMDIALOGS",
+        "StaticPopup_IsLastDisplayedFrame",
+        "pdcButton"
+    ]
+}

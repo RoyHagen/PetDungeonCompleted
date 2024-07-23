@@ -1,5 +1,9 @@
 ## Changelog
 
+-- 2.1a --
+* Moved from lib-frame gen to own gen
+* prepping for pre-patch
+
 -- 2.0 --
 * Total revamp of everything
 * Information is moved from chat to own frame to improve readability and ease of use

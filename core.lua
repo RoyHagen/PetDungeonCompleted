@@ -214,7 +214,8 @@ end)
 
 -- check for Rematch
 function IsRematch()
-    if IsAddOnLoaded("Rematch") then
+    local _, AddOnLoaded = C_AddOns.IsAddOnLoaded("Rematch")
+    if AddOnLoaded("Rematch") then
         return true
     end
 end

@@ -181,41 +181,50 @@ function UpdateInfo()
 end
 
 local function CreatePdcButton(rematch)
+    local buttonTable = {}
     if rematch then
-        pdcButton = CreateFrame("Button","PetDungonCompletedButton", RematchFrame, "UIPanelButtonTemplate")
-        pdcButton:SetPoint("LEFT", RematchFrame.BottomBar.UseRematchCheckButton.Text, "RIGHT", 20, 0)
+        pdcRematchButton = CreateFrame("Button","PetDungonCompletedButton", RematchFrame, "UIPanelButtonTemplate")
+        pdcRematchButton:SetPoint("LEFT", RematchFrame.BottomBar.UseRematchCheckButton.Text, "RIGHT", 20, 0)
+        table.insert(buttonTable, pdcRematchButton)
+        -- Because Rematch is a thing, the regular petjournal button needs to be offset even more, to account for the checkbox, and text, that rematch places there for when rematch is "disabled"
+        pdcButton = CreateFrame("Button","PetDungonCompletedButton", CollectionsJournal, "UIPanelButtonTemplate")
+        pdcButton:SetPoint("LEFT", PetJournalSummonButton, "RIGHT", 95, 0)
+        table.insert(buttonTable, pdcButton)
     else
         pdcButton = CreateFrame("Button","PetDungonCompletedButton", CollectionsJournal, "UIPanelButtonTemplate")
         pdcButton:SetPoint("LEFT", PetJournalSummonButton, "RIGHT", 20, 0)
+        table.insert(buttonTable, pdcButton)
     end
-    pdcButton:SetHeight(20)
-    pdcButton:SetWidth(100)
-    pdcButton:SetText("PDC")
-    pdcButton:SetScript("OnClick", function() 
-        local pdcFrame = CreatePDCFrame() 
-    end)
 
-    local function UpdateButtonVisibility(tabId)
-        if tabId == 2 then
-            pdcButton:Show()
-        else
-            pdcButton:Hide()
+    for _, button in ipairs(buttonTable) do
+        button:SetHeight(20)
+        button:SetWidth(100)
+        button:SetText("PDC")
+        button:SetScript("OnClick", function() 
+            local pdcFrame = CreatePDCFrame() 
+        end)
+        local function UpdateButtonVisibility(tabId)
+            if tabId == 2 then
+                button:Show()
+            else
+                button:Hide()
+            end
         end
+        hooksecurefunc("CollectionsJournal_UpdateSelectedTab",function(self)
+            local selected=PanelTemplates_GetSelectedTab(self);
+            UpdateButtonVisibility(selected)
+        end);
     end
-    hooksecurefunc("CollectionsJournal_UpdateSelectedTab",function(self)
-        local selected=PanelTemplates_GetSelectedTab(self);
-        UpdateButtonVisibility(selected)
-    end);
 end
 
 PetJournal:HookScript("OnShow", function()
-    CreatePdcButton(false)
+    CreatePdcButton(IsRematch())
 end)
 
 -- check for Rematch
 function IsRematch()
     local _, AddOnLoaded = C_AddOns.IsAddOnLoaded("Rematch")
-    if AddOnLoaded("Rematch") then
+    if AddOnLoaded then
         return true
     end
 end

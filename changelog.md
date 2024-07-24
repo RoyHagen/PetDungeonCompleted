@@ -1,8 +1,9 @@
 ## Changelog
 
--- 2.1a --
+-- 2.1 --
+* Updated for pre-patch
 * Moved from lib-frame gen to own gen
-* prepping for pre-patch
+* Fixed issue where button goes away, if Rematch is disabled with the checkbox
 
 -- 2.0 --
 * Total revamp of everything

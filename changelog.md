@@ -1,5 +1,8 @@
 ## Changelog
 
+-- 2.2 --
+* updated for WW, should work on launch
+
 -- 2.1 --
 * Updated for pre-patch
 * Moved from lib-frame gen to own gen

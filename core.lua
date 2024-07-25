@@ -1,3 +1,5 @@
+-- Declare RematchFrame as a global variable for the linter
+RematchFrame = _G.RematchFrame
 local pdcFrameOpen
 local pdcFrame
 
@@ -49,10 +51,13 @@ local function CreatePDCFrame()
         dummyString:Hide()
     end
 
+    -- gather variables to make it easier for myself
     -- Add some padding to the calculated width
     maxWidth = maxWidth + 25
+    -- height of window | heigh of textbox is window - 70
+    local maxHeight = 470
 
-    pdcFrame:SetSize(maxWidth, 450)
+    pdcFrame:SetSize(maxWidth, maxHeight)
     pdcFrame:SetPoint("TOP", UIParent, "TOP", 0, -50)  -- Move frame 50 pixels down from the top
 
 
@@ -74,7 +79,7 @@ local function CreatePDCFrame()
     pdcFrame.textLabel:SetFontObject("GameFontNormal")
     pdcFrame.textLabel:SetPoint("TOP", pdcFrame, "TOP", 0, -20)
     -- pdcFrame.textLabel:SetWidth(280)
-    pdcFrame.textLabel:SetSize(maxWidth-25, 380)
+    pdcFrame.textLabel:SetSize(maxWidth-25, maxHeight-70)
     pdcFrame.textLabel:SetFont("Fonts\\FRIZQT__.TTF", 14, "OUTLINE")  -- Change the size to 14 and make it bold
     pdcFrame.textLabel:SetText(myText)
 
@@ -107,7 +112,7 @@ function UpdateInfo()
     local has_mining_monkey = C_PetJournal.GetOwnedBattlePetString(2064)
     DeadminesPets = (has_pocket_cannon == nil and "Pocket Cannon, " or "") ..
                     (has_tricorne == nil and "Tricorne, " or "") ..
-                    (has_foe_reaper == nil and "Foe Reaper" or "") ..
+                    (has_foe_reaper == nil and "Foe Reaper, " or "") ..
                     (has_mining_monkey == nil and "Mining Monkey" or "")
     DeadminesPetsLen = DeadminesPets:len()
     DeadminesPets = "Missing Pets: " .. (DeadminesPets:len() > 0 and DeadminesPets:gsub(", %s*$", "") or "No")

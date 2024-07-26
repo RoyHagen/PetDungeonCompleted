@@ -1,11 +1,11 @@
-## Interface: 110002
+## Interface: 110000, 110002
 ## Title: Pet Dungeon Completed?
 ## Author: Riasta-Draenor EU
 ## DefaultState: enabled
 ## RequiredDeps: Blizzard_Collections
 ## OptionalDeps: Rematch
 ## SavedVariables: PetDungeonCompleted
-## Version: 2.2
+## Version: 2.2.1
 ## Notes: Call with /pdc. Prints to chat if you've completed this weeks pet battle dungeons or not.
 
 core.lua

@@ -1,5 +1,8 @@
 ## Changelog
 
+-- 2.2.1 --
+* marked for both Pre-patch and WW
+
 -- 2.2 --
 * updated for WW, should work on launch
 

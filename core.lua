@@ -187,6 +187,7 @@ end
 
 local function CreatePdcButton(rematch)
     local buttonTable = {}
+    -- If we have Rematch installed, buttons need to be made for rematch, as well as "disabled" rematch, done with the checkbox.
     if rematch then
         pdcRematchButton = CreateFrame("Button","PetDungonCompletedButton", RematchFrame, "UIPanelButtonTemplate")
         pdcRematchButton:SetPoint("LEFT", RematchFrame.BottomBar.UseRematchCheckButton.Text, "RIGHT", 20, 0)

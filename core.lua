@@ -1,4 +1,3 @@
--- Declare RematchFrame as a global variable for the linter
 RematchFrame = _G.RematchFrame
 local pdcFrameOpen
 local pdcFrame

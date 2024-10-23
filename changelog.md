@@ -1,5 +1,8 @@
 ## Changelog
 
+-- 2.2.4 --
+* Interface version update
+
 -- 2.2.1 --
 * marked for both Pre-patch and WW
 

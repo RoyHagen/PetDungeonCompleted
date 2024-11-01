@@ -1,5 +1,8 @@
 ## Changelog
 
+-- 2.2.5 --
+* initial 11.0.7 update
+
 -- 2.2.4 --
 * Interface version update
 

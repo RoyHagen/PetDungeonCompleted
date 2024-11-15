@@ -101,6 +101,7 @@ local function CreatePDCFrame()
 end
 
 -- Generate the data
+-- future, include currency info?
 function UpdateInfo()
     -- print("Updated info")
     -- Deadmines

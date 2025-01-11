@@ -1,5 +1,8 @@
 ## Changelog
 
+-- 2.2.7 --
+* Patch 11.1.0 ready
+
 -- 2.2.6 --
 * bugfixes
 

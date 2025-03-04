@@ -9,7 +9,7 @@ local function CreatePDCFrame()
         pdcFrameOpen = true
     end
     UpdateInfo()
-    -- Define the text variable
+    -- Define the text variable.
     local myText = "\
 -- Deadmines --\
 "..DeadState.."\

@@ -1,6 +1,6 @@
 ## Changelog
 
--- 2.2.8 --
+-- 2.2.8 -- 
 * removed old interface version
 
 -- 2.2.7 --

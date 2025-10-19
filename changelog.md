@@ -1,5 +1,8 @@
 ## Changelog
 
+-- 2.3.1 --
+* version bump
+
 -- 2.3 --
 * Marked as updated for 11.2, no new functions.
 

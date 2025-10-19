@@ -35,6 +35,7 @@ local function CreatePDCFrame()
 "..CelestialState.."\
 "..CelestialPets..""
 
+
     -- Create the main frame
     local pdcFrame = CreateFrame("Frame", "PDCCustomFrame", UIParent, "BasicFrameTemplateWithInset")
     

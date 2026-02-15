@@ -1,5 +1,8 @@
 ## Changelog
 
+-- 2.4.1 --
+* categorized addon in WoW addon list as an "Collections" addon
+
 -- 2.4.0 --
 * Updated for Midnight Prepatch event
 

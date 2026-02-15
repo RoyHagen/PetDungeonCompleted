@@ -1,5 +1,8 @@
 ## Changelog
 
+-- 2.4.0 --
+* Updated for Midnight Prepatch event
+
 -- 2.3.1 --
 * version bump
 

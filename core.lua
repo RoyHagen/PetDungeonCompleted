@@ -52,7 +52,7 @@ local function CreatePDCFrame()
     end
 
     -- gather variables to make it easier for myself
-    -- Add some padding to the calculated width
+    -- Add some padding to the calculated width.
     maxWidth = maxWidth + 25
     -- height of window | heigh of textbox is window - 70
     local maxHeight = 470

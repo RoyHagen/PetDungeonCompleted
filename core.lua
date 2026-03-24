@@ -36,7 +36,7 @@ local function CreatePDCFrame()
 "..CelestialPets..""
 
 
-    -- Create the main frame
+    -- Create the main frame --
     local pdcFrame = CreateFrame("Frame", "PDCCustomFrame", UIParent, "BasicFrameTemplateWithInset")
     
     -- Determine the longest line width
